@@ -8,12 +8,19 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class CilindroApp extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CilindroApp.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        // Carga la primera vista (presentación) desde su archivo FXML
+        FXMLLoader loader = new FXMLLoader(CilindroApp.class.getResource("PresentacionVista.fxml"));
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Depósitos cilíndricos - CBTis 182");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
