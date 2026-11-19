@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ejemplos.appcilindro.CilindroController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="150.6" minHeight="10.0" prefHeight="150.6" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="150.6" minHeight="10.0" prefHeight="150.6" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="186.6" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="TOP">
+            <children>
+                <HBox alignment="CENTER" prefHeight="109.0" prefWidth="200.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Diámetro (m):">
+                            <font>
+                                <Font name="Century" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFldDiametro" promptText="Ej. 2.5" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="98.0" prefWidth="200.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Label text="Altura (m):">
+                            <font>
+                                <Font name="Century" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtFldAltura" promptText="Ej. 3.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#onActionBtnSalir" prefHeight="26.0" prefWidth="62.0" text="Salir" GridPane.valignment="TOP">
+            <font>
+                <Font name="Century Gothic" size="12.0" />
+            </font>
+        </Button>
+        <HBox alignment="CENTER" prefHeight="82.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <children>
+                <Button fx:id="btnBorrar" mnemonicParsing="false" onAction="#onActionBtnBorrar" prefHeight="26.0" prefWidth="119.0" text="Borrar">
+                    <font>
+                        <Font name="Century" size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnCalcular" mnemonicParsing="false" onAction="#onActionBtnCalcular" prefHeight="26.0" prefWidth="120.0" text="Calcular">
+                    <font>
+                        <Font name="Century" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <children>
+                <Label prefHeight="124.0" prefWidth="200.0" text="Calcula tu Área y Volumen">
+                    <font>
+                        <Font name="Harrington" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+        <Pane fx:id="imgpane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowSpan="3" />
+    </children>
+</GridPane>
